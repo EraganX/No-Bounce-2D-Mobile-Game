@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         while (randomBallers>i)
         {
             float randomSize = Random.Range(0.4f, 1f);
-            Vector3 loaction = Random.insideUnitCircle * 3f;
+            Vector3 loaction = Random.insideUnitCircle * 2f;
             Color color = new Color(Random.value,Random.value,Random.value);
 
             GameObject ball =Instantiate(ballPrefab,new Vector3(transform.position.x+ loaction.x, transform.position.y + loaction.y,transform.position.z),Quaternion.identity);

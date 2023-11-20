@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boundaries : MonoBehaviour
 {
-    public GameObject left,right, up, down;
+    public Transform left,right, up, down;
 
     Vector3 _leftMostScreenPoint, _rightMostScreenPoint, _upMostScreenPoint, _downMostScreenPoint;
     Vector3 leftMostWorldPoint, rightMostWorldPoint, upMostWorldPoint, downMostWorldPoint;
@@ -21,9 +21,9 @@ public class Boundaries : MonoBehaviour
         upMostWorldPoint = Camera.main.ScreenToWorldPoint(_upMostScreenPoint);
         downMostWorldPoint = Camera.main.ScreenToWorldPoint(_downMostScreenPoint);
 
-        left.transform.position = leftMostWorldPoint;
-        right.transform.position = rightMostWorldPoint;
-        up.transform.position = upMostWorldPoint;
-        down.transform.position = downMostWorldPoint;
+        left.position = leftMostWorldPoint;
+        right.position = rightMostWorldPoint;
+        up.position = upMostWorldPoint;
+        down.position = downMostWorldPoint;
     }
 }

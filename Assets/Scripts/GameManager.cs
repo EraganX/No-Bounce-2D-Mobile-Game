@@ -8,12 +8,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     int score = 0;
-    [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private GameObject _panel;
 
     private void Awake()
     {
         _panel.gameObject.SetActive(false);
+        Application.targetFrameRate = 60;
     }
 
     public void ScoreUP()
